@@ -121,9 +121,6 @@ footer h3 {
   background: var(--gradient-text);
   -webkit-background-clip: text;
   color: transparent;
-  border-width: 2px;
-  border-color: rgb(0 0 0);
-  border-radius: 0.125rem;
 }
 
 @media (max-width: 768px) {
