@@ -1,0 +1,139 @@
+:root {
+  --color-primary: #007aff;
+  --color-background: #234;
+  --color-text: #ffffff;
+  --color-feature-bg: rgba(255, 255, 255, 0.1);
+  --gradient-text: linear-gradient(
+    to right,
+    #09f1b8,
+    #00a2ff,
+    #ff00d2,
+    #fed90f
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Helvetica Neue", sans-serif;
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--color-background);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.main-title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.feature {
+  background-color: var(--color-feature-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.feature-title {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.chatbot-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 15px;
+}
+
+.chatbot-iframe {
+  width: 100%;
+  min-height: 700px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer h3 {
+  font-size: 3rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-width: 2px;
+  border-color: rgb(0 0 0);
+  border-radius: 0.125rem;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .feature-container {
+    grid-template-columns: 1fr;
+  }
+}
